@@ -1,0 +1,43 @@
+//
+//  Shared.xcconfig
+//  Quickoffice_iPad
+//
+//  Created by Michael Seleznyov on 02.08.11.
+//  Copyright 2011 Quickoffice Inc. All rights reserved.
+//
+
+#include "StrictWarnings.xcconfig"
+
+SDKROOT = iphoneos
+GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+//GCC_VERSION = 4.2
+//GCC_VERSION = com.apple.compilers.llvmgcc42
+IPHONEOS_DEPLOYMENT_TARGET = 4.0
+
+ARCHS = $(ARCHS_UNIVERSAL_IPHONE_OS)
+QO_COPY_HEADERS_DESTINATION = ../QOPublicHeaders/$(PRODUCT_NAME).$(WRAPPER_EXTENSION)/Headers/
+QO_COPY_SYS_HEADERS_DESTINATION = ../QOSysHeaders/$(PRODUCT_NAME)
+
+QO_FRAMEWORK_SEARCH_PATH = $(SYMROOT)/QOPublicHeaders/
+
+FRAMEWORK_SEARCH_PATHS = $(QO_FRAMEWORK_SEARCH_PATH)
+HEADER_SEARCH_PATHS = $(SYMROOT)/QOSysHeaders/
+
+SKIP_INSTALL = YES
+
+ONLY_ACTIVE_ARCH = NO
+VALID_ARCHS = armv7 i386
+
+GCC_SYMBOLS_PRIVATE_EXTERN = NO
+
+GCC_THUMB_SUPPORT = NO
+
+PREFIX_HEADER = Common/QO_Foundation/iphone/QO_Common.pch
+GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES
+PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO
+
+OTHER_CFLAGS[arch=*] = -isystem $(SYMROOT)/QOSysHeaders/ -Wdiv-by-zero -Wbad-function-cast -Wstrict-prototypes -Wold-style-definition -Wnested-externs -Wno-format-nonliteral
+OTHER_CFLAGS[arch=armv7] = -mno-thumb
+
+OTHER_CPLUSPLUSFLAGS = -isystem $(SYMROOT)/QOSysHeaders/ -Wabi -Wctor-dtor-privacy  -Wsign-promo -Wno-format-nonliteral
+OTHER_CPLUSPLUSFLAGS[arch=armv7] = -mno-thumb -isystem $(SYMROOT)/QOSysHeaders -Wabi -Wctor-dtor-privacy  -Wsign-promo -Wno-format-nonliteral

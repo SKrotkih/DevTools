@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BB695117-855B-406E-9866-82F8D8377E7B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DevTools</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D3E8A1DB7F8A5EBEE258395D2FA519FE37A4CFD2</key>
+		<string>https://github.com/SKrotkih/DevTools.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DevTools/DevTools.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D3E8A1DB7F8A5EBEE258395D2FA519FE37A4CFD2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SKrotkih/DevTools.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D3E8A1DB7F8A5EBEE258395D2FA519FE37A4CFD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D3E8A1DB7F8A5EBEE258395D2FA519FE37A4CFD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DevTools</string>
+		</dict>
+	</array>
+</dict>
+</plist>

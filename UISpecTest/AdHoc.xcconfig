@@ -1,0 +1,11 @@
+//
+//  AdHoc.xcconfig
+//  Quickoffice_iPad
+//
+//  Created by Michael Seleznyov on 02.08.11.
+//  Copyright 2011 Quickoffice Inc. All rights reserved.
+//
+
+#include "Shared.xcconfig"
+
+ONLY_ACTIVE_ARCH = NO

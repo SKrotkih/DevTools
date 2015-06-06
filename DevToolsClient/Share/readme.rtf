@@ -1,0 +1,64 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red100\green56\blue32;\red196\green26\blue22;\red170\green13\blue145;
+\red92\green38\blue153;\red63\green110\blue116;\red38\green71\blue75;\red46\green13\blue110;}
+\margl1440\margr1440\vieww22320\viewh11420\viewkind0
+\deftab560
+\pard\tx560\pardeftab560\pardirnatural
+
+\f0\fs22 \cf2 \CocoaLigature0 1. Copy \cf3 DTSendLog.h and DTSendLog.m to the Quickoffice/IPH_QO_Shared/inc/utils and Quickoffice/IPH_QO_Shared/src/utils folders.\
+\cf2 \
+2. In QuickofficeAppDelegate.m add next code\
+\
+#import \cf3 <DevToolsClient/DevToolsClientController.h>\cf2 \
+\
+\'85\
+\
+\pard\tx560\pardeftab560\pardirnatural
+\cf0 - (\cf4 BOOL\cf0 )application:(\cf5 UIApplication\cf0  *)application didFinishLaunchingWithOptions:(\cf5 NSDictionary\cf0  *)launchOptions\
+\{\
+\'85\
+\
+    [[\cf6 DevToolsClientController\cf0  \cf7 sharedInstance\cf0 ] \cf7 initWithAppRootViewController\cf0 : navController\
+                                                                \cf7 andMainWidow\cf0 : \cf4 self\cf0 .\cf6 window\cf0 ];\
+\
+\'85\
+\}\cf2 \
+\
+\
+2.1. New FM:\
+\
+#import \cf3 <DevToolsClient/DevToolsClientController.h>\cf2 \
+\
+iPad_QuickofficeAppWindowController.mm\
+\
+- (void) presentModalDialog: (UIViewController *) modalViewController animated: (BOOL) animated\
+...\
+\
+    [[DevToolsClientController sharedInstance] initWithAppRootViewController: modalViewController\
+                                                                andMainWidow: window];\
+...\
+\
+\
+3. Add DevToolsClient.xcodeproj to the SampleFileManager (or to an other FileManager). Add DevToolsClientLib to the SampleFileManagerLib Target Dependencies.\
+\
+4. Add DevToolsClientRes.bundle to SampleFileManagerBundle.\
+\
+5. For send the log-messages you need add next code's strings to a code module:\
+\
+#import \cf3 <QOShared/DTSendLog.h>\cf0 \
+...\
+\
+[[\cf6 DTSendLog\cf0  \cf7 sharedInstance\cf0 ] \cf7 logMessage\cf0 : \cf3 @"\\n%@"\cf0 , \cf8 NSStringFromCGRect\cf0 ([value \cf8 CGRectValue\cf0 ])];\
+\
+\
+\
+\pard\tx560\pardeftab560\pardirnatural
+\cf2 #ifdef __DEBUG__\
+#import \cf3 <QOShared/DTSendLog.h>\cf2 \
+#define DTLog(A, ...)  \\\
+[[DTSendLog sharedInstance] logMessage: [NSString stringWithFormat: @\cf3 "[%-50s : %-5d] %@"\cf2 , [[[NSString stringWithUTF8String : __FUNCTION__] lastPathComponent] UTF8String], __LINE__, (A)] , ##__VA_ARGS__]\
+#else\
+#define DTLog(A, ...)\
+#endif\
+}

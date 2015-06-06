@@ -1,0 +1,26 @@
+//
+//  Shared.xcconfig
+//  Quickoffice_iPad
+//
+//  Created by Michael Seleznyov on 02.08.11.
+//  Copyright 2011 Quickoffice Inc. All rights reserved.
+//
+
+SDKROOT = iphoneos
+//GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+//GCC_VERSION = 4.2
+GCC_VERSION = com.apple.compilers.llvmgcc42
+IPHONEOS_DEPLOYMENT_TARGET = 5.1
+
+ARCHS = $(ARCHS_UNIVERSAL_IPHONE_OS)
+QO_COPY_HEADERS_DESTINATION = ../QOPublicHeaders/$(PRODUCT_NAME).$(WRAPPER_EXTENSION)/Headers
+
+QO_FRAMEWORK_SEARCH_PATH = $(SYMROOT)/QOPublicHeaders
+
+FRAMEWORK_SEARCH_PATHS = $(QO_FRAMEWORK_SEARCH_PATH)
+
+SKIP_INSTALL = YES
+
+VALID_ARCHS = armv6 armv7 i386
+
+GCC_SYMBOLS_PRIVATE_EXTERN = YES

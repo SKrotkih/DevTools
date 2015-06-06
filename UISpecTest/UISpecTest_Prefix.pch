@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'DevToolsClient' target in the 'DevToolsClient' project
+//
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#endif
+
+#ifdef __DEBUG__
+#import <DevToolsClient/DevToolsSendLog.h>
+#define DTLog(A, ...)  [[DevToolsSendLog deafultInstance] logMessageForFunction: __FUNCTION__ line: __LINE__ format: (A), ##__VA_ARGS__]
+#define DTTraceLog() [[DevToolsSendLog deafultInstance] traceLog: __FUNCTION__ line: __LINE__]
+#else
+#define DTLog(A, ...)
+#define DTTraceLog()
+#endif
