@@ -1,4 +1,4 @@
 # DevTools
 
-The detailed description is on my blog: http://skrotkihprojects.blogspot.com
+The detailed description is presented on my blog: http://skrotkihprojects.blogspot.com
 
