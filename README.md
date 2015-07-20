@@ -1,4 +1,4 @@
 # DevTools
 
-All details in a blog: http://skrotkihprojects.blogspot.com
+All details in my blog: http://skrotkihprojects.blogspot.com
 
