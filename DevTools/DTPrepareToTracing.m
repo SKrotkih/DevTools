@@ -51,11 +51,11 @@
              [openPanel orderOut: self]; // close panel before we might present an error
              if ([sender tag] == 0)
              {
-                 [pathToProject setStringValue: [openPanel filename]];
+                 [pathToProject setStringValue: [[openPanel URL] absoluteString]];
              }
              else if ([sender tag] == 1)
              {
-                 [pathToTemplateProject setStringValue: [openPanel filename]];
+                 [pathToTemplateProject setStringValue: [[openPanel URL] absoluteString]];
              }
          }
      }];

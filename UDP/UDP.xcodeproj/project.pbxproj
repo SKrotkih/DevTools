@@ -171,7 +171,7 @@
 		7F0C7A4E15E8FD48004E0CF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sergey Krotkih";
 			};
 			buildConfigurationList = 7F0C7A5115E8FD48004E0CF9 /* Build configuration list for PBXProject "UDP" */;
@@ -238,10 +238,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -256,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -265,7 +265,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -292,6 +291,7 @@
 				GCC_PREFIX_HEADER = "UDP2/UDP-Prefix.pch";
 				INFOPLIST_FILE = "UDP2/UDP-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Quickoffice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = UDP;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -308,6 +308,7 @@
 				GCC_PREFIX_HEADER = "UDP2/UDP-Prefix.pch";
 				INFOPLIST_FILE = "UDP2/UDP-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Quickoffice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = UDP;
 				WRAPPER_EXTENSION = framework;
 			};

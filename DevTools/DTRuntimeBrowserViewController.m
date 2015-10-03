@@ -254,7 +254,7 @@ static NSMutableArray* generateESTree()
     {
         NSLog(@"Got an error: %@", jsonError);
         
-        self.contentArray = [NSArray array];
+        self.contentArray = [NSMutableArray array];
         [treeController setContent: self.contentArray];
         
         [outlineView reloadData];

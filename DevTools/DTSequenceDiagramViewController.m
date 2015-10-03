@@ -33,7 +33,7 @@ const CGFloat LengthSidePoint = 15.0f;
 {
 }
 
-@synthesize currentClassView;
+@synthesize currentClassView, beginOfreviousString;
 
 - (void) dealloc
 {

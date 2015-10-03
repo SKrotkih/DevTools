@@ -46,6 +46,7 @@
 		7FAD7C1B164BB63600FA1EE9 /* DTViewsDataInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD7C1A164BB63600FA1EE9 /* DTViewsDataInfoView.m */; };
 		7FAEF3131743297F00F3E8EE /* DTSequenceDiagramBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FAEF3121743297F00F3E8EE /* DTSequenceDiagramBackgroundView.m */; };
 		7FB000D0166A216A0011BB58 /* DTRuntimeBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB000CC166A216A0011BB58 /* DTRuntimeBrowserViewController.xib */; };
+		7FC008E11BC01DFD00018169 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7FC008E01BC01DFD00018169 /* README.md */; settings = {ASSET_TAGS = (); }; };
 		7FC50DD015EA13DF003B12CA /* DTUDPClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC50DCF15EA13DF003B12CA /* DTUDPClientController.m */; };
 		7FC68464165E81140069B14F /* DTTransparentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC68463165E81130069B14F /* DTTransparentView.m */; };
 		7FD2F4BD16B7CE32008C5A90 /* movic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2F4BC16B7CE32008C5A90 /* movic.png */; };
@@ -150,6 +151,7 @@
 		7FAEF3111743297F00F3E8EE /* DTSequenceDiagramBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSequenceDiagramBackgroundView.h; sourceTree = "<group>"; };
 		7FAEF3121743297F00F3E8EE /* DTSequenceDiagramBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTSequenceDiagramBackgroundView.m; sourceTree = "<group>"; };
 		7FB000CD166A216A0011BB58 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/DTRuntimeBrowserViewController.xib; sourceTree = "<group>"; };
+		7FC008E01BC01DFD00018169 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		7FC50DCE15EA13DF003B12CA /* DTUDPClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTUDPClientController.h; path = Net/DTUDPClientController.h; sourceTree = "<group>"; };
 		7FC50DCF15EA13DF003B12CA /* DTUDPClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTUDPClientController.m; path = Net/DTUDPClientController.m; sourceTree = "<group>"; };
 		7FC68462165E81130069B14F /* DTTransparentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTransparentView.h; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				256AC3F00F4B6AF500CF3369 /* DevTools_Prefix.pch */,
 				7F4560E61663981800732618 /* readme.txt */,
+				7FC008E01BC01DFD00018169 /* README.md */,
 				7F7F4DEE15D8B4320041A497 /* Images */,
 				7FB8DF5715C525DF00BD74D0 /* RuntimeBrowser */,
 				7FA4EE6E15C02AC50051A3E3 /* Credits.rtf */,
@@ -432,7 +435,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DevTools" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -524,6 +527,7 @@
 				7FAD7C10164A95F700FA1EE9 /* DTTestScriptViewController.m in Sources */,
 				7FAD7C16164B9FA500FA1EE9 /* DTViewsInfoViewController.m in Sources */,
 				7FAD7C1B164BB63600FA1EE9 /* DTViewsDataInfoView.m in Sources */,
+				7FC008E11BC01DFD00018169 /* README.md in Sources */,
 				7FC68464165E81140069B14F /* DTTransparentView.m in Sources */,
 				7F700B9416731D8900EBF95A /* DTSelectClassesPopUpButton.m in Sources */,
 				7F700B971673858900EBF95A /* DTEnterSingleDataModalDialog.m in Sources */,
@@ -617,6 +621,7 @@
 				GCC_PREFIX_HEADER = DevTools_Prefix.pch;
 				INFOPLIST_FILE = "DevTools-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doctormobile.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = DevTools;
 				SDKROOT = macosx;
 			};
@@ -633,6 +638,7 @@
 				GCC_PREFIX_HEADER = DevTools_Prefix.pch;
 				INFOPLIST_FILE = "DevTools-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.doctormobile.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = DevTools;
 				SDKROOT = macosx;
 			};
@@ -641,7 +647,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -655,7 +661,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
